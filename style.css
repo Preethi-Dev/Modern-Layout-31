@@ -1,5 +1,162 @@
-/* Resets */
 /* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "Arthead FREE";
+  src: url(./asstes/fonts/Arthead-Regular\ FREE.otf);
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Variables */
+:root {
+  --primary: #091723;
+  --secondary: #150a25;
+  --bg: linear-gradient(180deg, #9cbede 0%, #f1eaf8 100%);
+}
+
 /* Base Styles */
+body {
+  color: var(--primary);
+  background: var(--bg);
+  background-repeat: no-repeat;
+  background-color: #f1eaf8;
+}
+
+a {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1800px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container > * {
+  padding: 3rem;
+}
+
+main .title h1,
+.text h2 {
+  font-family: "Arthead FREE";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139px;
+}
+
+main .text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 148%;
+  text-align: justify;
+  letter-spacing: -0.02em;
+}
+
+main .text .image_copy {
+  font-weight: 800;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .menu {
+  display: flex;
+  gap: 1rem;
+}
+
+footer a {
+  font-family: "Arthead FREE";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 19px;
+  color: var(--secondary);
+}
+
 /* Mobile Styles */
+.container {
+  gap: 3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .title h1,
+.text h2 {
+  font-size: 6rem;
+}
+
+main .text {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 432px;
+}
+
+footer .social_media_link {
+  display: none;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 600px) {
+  main .title h1 {
+    font-size: 8rem;
+  }
+
+  footer > * {
+    width: 100%;
+  }
+
+  footer .social_media_link {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Laptop and Desktop Styles */
+@media screen and (min-width: 1200px) {
+  main .title h1 {
+    font-size: 9rem;
+  }
+
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  main .text {
+    align-self: stretch;
+  }
+
+  main .text .image_copy {
+    margin-top: auto;
+  }
+}
